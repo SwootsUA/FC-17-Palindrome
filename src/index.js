@@ -7,7 +7,7 @@
  */
 function isPalindrome(str) {
     if (typeof str !== 'string') return false;
-    let strWithoutSpace = str.toLowerCase().split(' ').join('');
+    let strWithoutSpace = str.toLowerCase().replaceAll(' ', '');
     return strWithoutSpace === strWithoutSpace.split('').reverse().join('');
 }
 
